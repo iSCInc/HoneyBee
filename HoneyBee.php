@@ -22,3 +22,13 @@ $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['SpecialWikiApiary'] = $dir . 'WikiApiarySpecial.php';
 $wgExtensionMessagesFiles['HoneyBee'] = $dir . 'HoneyBee.i18n.php';
 $wgSpecialPages['WikiApiary'] = 'SpecialWikiApiary';
+
+# Add the "Monitored by WikiApiary" footer icon
+$wgMonitoredByWikiApiary = true;
+if ( $wgMonitoredByWikiApiary ) {
+	$wgFooterIcons['monitoredby']['wikiapiary'] = array(
+		"src" => "//wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png",
+		"url" => "//wikiapiary.com/wiki/Main_Page?pk_campaign=FooterIcon",
+		"alt" => "Monitored by WikiApiary"
+	);
+}
